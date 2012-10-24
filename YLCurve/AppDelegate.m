@@ -1,14 +1,15 @@
 //
 //  AppDelegate.m
-//  YLCurve
+//  YL
 //
-//  Created by  rtsafe02 on 12-10-24.
+//  Created by  rtsafe02 on 12-9-24.
 //  Copyright (c) 2012年 ampy. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

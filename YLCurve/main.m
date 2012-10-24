@@ -1,8 +1,8 @@
 //
 //  main.m
-//  YLCurve
+//  YL
 //
-//  Created by  rtsafe02 on 12-10-24.
+//  Created by  rtsafe02 on 12-9-24.
 //  Copyright (c) 2012年 ampy. All rights reserved.
 //
 
