@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0515929216380DBF003F1193 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0515929116380DBF003F1193 /* Reachability.m */; };
+		0515929616380EB0003F1193 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0515929516380EB0003F1193 /* Settings.m */; };
+		0515929816380F38003F1193 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0515929716380F38003F1193 /* Settings.plist */; };
 		05B02BE11637DF6300D72DD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE01637DF6300D72DD7 /* UIKit.framework */; };
 		05B02BE31637DF6300D72DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE21637DF6300D72DD7 /* Foundation.framework */; };
 		05B02BE51637DF6300D72DD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE41637DF6300D72DD7 /* CoreGraphics.framework */; };
@@ -21,11 +24,15 @@
 		05B02C071637DFFA00D72DD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B02C041637DFFA00D72DD7 /* LoginViewController.m */; };
 		05B02C081637DFFA00D72DD7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B02C051637DFFA00D72DD7 /* LoginViewController.xib */; };
 		05B02C091637DFFA00D72DD7 /* YL.ico in Resources */ = {isa = PBXBuildFile; fileRef = 05B02C061637DFFA00D72DD7 /* YL.ico */; };
-		05B02C0B1637E09400D72DD7 /* CoreCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02C0A1637E09400D72DD7 /* CoreCode.framework */; };
 		05B02C0D1637E12100D72DD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02C0C1637E12100D72DD7 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0515929016380DBF003F1193 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0515929116380DBF003F1193 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0515929416380EB0003F1193 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		0515929516380EB0003F1193 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		0515929716380F38003F1193 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		05B02BDC1637DF6300D72DD7 /* YLCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B02BE01637DF6300D72DD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05B02BE21637DF6300D72DD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,7 +53,6 @@
 		05B02C041637DFFA00D72DD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		05B02C051637DFFA00D72DD7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		05B02C061637DFFA00D72DD7 /* YL.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = YL.ico; sourceTree = "<group>"; };
-		05B02C0A1637E09400D72DD7 /* CoreCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreCode.framework; sourceTree = "<group>"; };
 		05B02C0C1637E12100D72DD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -56,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B02C0D1637E12100D72DD7 /* SystemConfiguration.framework in Frameworks */,
-				05B02C0B1637E09400D72DD7 /* CoreCode.framework in Frameworks */,
 				05B02BE11637DF6300D72DD7 /* UIKit.framework in Frameworks */,
 				05B02BE31637DF6300D72DD7 /* Foundation.framework in Frameworks */,
 				05B02BE51637DF6300D72DD7 /* CoreGraphics.framework in Frameworks */,
@@ -66,6 +71,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0515928E16380DBF003F1193 /* CoreCode */ = {
+			isa = PBXGroup;
+			children = (
+				0515929316380EB0003F1193 /* Configuration */,
+				0515928F16380DBF003F1193 /* Net */,
+			);
+			path = CoreCode;
+			sourceTree = "<group>";
+		};
+		0515928F16380DBF003F1193 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				0515929016380DBF003F1193 /* Reachability.h */,
+				0515929116380DBF003F1193 /* Reachability.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		0515929316380EB0003F1193 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0515929416380EB0003F1193 /* Settings.h */,
+				0515929516380EB0003F1193 /* Settings.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		05B02BD11637DF6300D72DD7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				05B02C0C1637E12100D72DD7 /* SystemConfiguration.framework */,
-				05B02C0A1637E09400D72DD7 /* CoreCode.framework */,
 				05B02BE01637DF6300D72DD7 /* UIKit.framework */,
 				05B02BE21637DF6300D72DD7 /* Foundation.framework */,
 				05B02BE41637DF6300D72DD7 /* CoreGraphics.framework */,
@@ -98,6 +129,8 @@
 		05B02BE61637DF6300D72DD7 /* YLCurve */ = {
 			isa = PBXGroup;
 			children = (
+				0515929716380F38003F1193 /* Settings.plist */,
+				0515928E16380DBF003F1193 /* CoreCode */,
 				05B02C031637DFFA00D72DD7 /* LoginViewController.h */,
 				05B02C041637DFFA00D72DD7 /* LoginViewController.m */,
 				05B02C051637DFFA00D72DD7 /* LoginViewController.xib */,
@@ -136,6 +169,7 @@
 				05B02BD81637DF6300D72DD7 /* Sources */,
 				05B02BD91637DF6300D72DD7 /* Frameworks */,
 				05B02BDA1637DF6300D72DD7 /* Resources */,
+				0523D5C01637F18400701C60 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -184,10 +218,27 @@
 				05B02BFD1637DF6400D72DD7 /* ViewController.xib in Resources */,
 				05B02C081637DFFA00D72DD7 /* LoginViewController.xib in Resources */,
 				05B02C091637DFFA00D72DD7 /* YL.ico in Resources */,
+				0515929816380F38003F1193 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0523D5C01637F18400701C60 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05B02BD81637DF6300D72DD7 /* Sources */ = {
@@ -198,6 +249,8 @@
 				05B02BF11637DF6400D72DD7 /* AppDelegate.m in Sources */,
 				05B02BFA1637DF6400D72DD7 /* ViewController.m in Sources */,
 				05B02C071637DFFA00D72DD7 /* LoginViewController.m in Sources */,
+				0515929216380DBF003F1193 /* Reachability.m in Sources */,
+				0515929616380EB0003F1193 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +331,7 @@
 		05B02C011637DF6400D72DD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -293,6 +347,7 @@
 		05B02C021637DF6400D72DD7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -324,6 +379,7 @@
 				05B02C021637DF6400D72DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

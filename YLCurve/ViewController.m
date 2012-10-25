@@ -35,8 +35,12 @@
     // 設定 cookie 到 storage 中
     //[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
     // 建立 NSURLRequest 連到 cookie.php，連線的時候會自動加入上面設定的 Cookie
-    NSString *urlAddress = @"http://10.211.55.3:1229/iPadCurve/DrawCurve?index=0";
-    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSString *urlstr = [[Settings Instance].ServiceUrl stringByAppendingString:@"/iPadCurve/DrawCurve?index=0"];
+    //NSURL *url = [NSURL URLWithString: @"http://10.211.55.3:1229/iPadAccount/LogOn"];
+    NSURL *url = [NSURL URLWithString: urlstr];
+    
+    //NSString *urlAddress = @"http://10.211.55.3:1229/iPadCurve/DrawCurve?index=0";
+    //NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -135,8 +139,10 @@
     [uiWebView loadHTMLString:s baseURL:nil];
 }
 - (IBAction)InputButtonClick:(id)sender {
-    NSURL *url =[NSURL URLWithString:@"http://10.211.55.3:1229/iPadCurve/InsertData?index=0"];
-    
+    //NSURL *url =[NSURL URLWithString:@"http://10.211.55.3:1229/iPadCurve/InsertData?index=0"];
+    NSString *urlstr = [[Settings Instance].ServiceUrl stringByAppendingString:@"/iPadCurve/InsertData?index=0"];
+    //NSURL *url = [NSURL URLWithString: @"http://10.211.55.3:1229/iPadAccount/LogOn"];
+    NSURL *url = [NSURL URLWithString: urlstr];
     NSURLRequest *request =[NSURLRequest requestWithURL:url];
     
     //MainWebView.delegate=self;
@@ -152,6 +158,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return ((interfaceOrientation ==UIDeviceOrientationLandscapeLeft)||(interfaceOrientation ==UIDeviceOrientationLandscapeRight));
+}
+- (IBAction)LogOutButtonClick:(id)sender {
+    LoginViewController * inspectview = [[LoginViewController alloc] init];
+    [self presentViewController:inspectview animated:YES completion :^(void){
+        return ;
+    }];
 }
 
 @end

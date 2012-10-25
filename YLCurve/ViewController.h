@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Settings.h"
+#import "LoginViewController.h"
 
 @interface ViewController : UIViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *MainWebView;

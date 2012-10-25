@@ -24,11 +24,12 @@
         // Custom initialization
         
         
-        Reachability * re =[Reachability reachabilityWithHostname:@"http://10.211.55.3:1229"];
+        Reachability * re =[Reachability reachabilityWithHostname:[Settings Instance].ServiceUrl];
         NetworkStatus mp = [re currentReachabilityStatus];
         if(mp==ReachableViaWiFi)
         {
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提醒" message:@"网络不通，请联系管理员" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提醒" message:@"网络不通，请联系管理员" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:@"ok", nil];
+            alert.tag=100;
             [alert show];
 
         };
@@ -41,7 +42,8 @@
 
 -(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:    (NSInteger)buttonIndex
 {
-    if(buttonIndex==0)
+
+    if(alertView.tag==100 && buttonIndex==0)
     {
         exit(0);
         //Code that will run after you press ok button
@@ -73,11 +75,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)LoginButtonClick:(id)sender {
-    
-    NSURL *url = [NSURL URLWithString: @"http://10.211.55.3:1229/iPadAccount/LogOn"];
+    NSString *urlstr = [[Settings Instance].ServiceUrl stringByAppendingString:@"/iPadAccount/LogOn"];
+    //NSURL *url = [NSURL URLWithString: @"http://10.211.55.3:1229/iPadAccount/LogOn"];
+    NSURL *url = [NSURL URLWithString: urlstr];
     NSString *body = [NSString stringWithFormat: @"UserName=%@&Password=%@&RememberMe=%@&RememberMe=%@",UserName.text,Password.text,@"true",@"false"];
     ////
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
     //
     [request setHTTPMethod: @"POST"];
     [request setHTTPBody: [body dataUsingEncoding: NSUTF8StringEncoding]];
@@ -92,8 +95,20 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&reponse error:&error];
     
     if (error) {
-        
-        NSLog(@"Something wrong: %@",[error description]);
+        int mp = error.code;
+        switch (error.code) {
+            case -1001:
+            {
+                UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"提示" message:@"连接超时！请联系管理员" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
+                [alert show];
+            
+                break;
+            }
+                
+            default:
+                break;
+        }
+        NSLog(@"Something wrong: %@,code :%d",[error description],mp);
         
     }else {
         
@@ -111,7 +126,7 @@
             }
             else
             {
-                UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名口令不正确！" delegate:self cancelButtonTitle:@"好" otherButtonTitles:nil];
+                UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名口令不正确！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
                 [alert show];
             }
             

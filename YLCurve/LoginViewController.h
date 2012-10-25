@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
-#import "CoreCode/Reachability.h"
+#import "Reachability.h"
+#import "Settings.h"
 
 @interface LoginViewController : UIViewController
 {
