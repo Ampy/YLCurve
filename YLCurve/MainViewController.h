@@ -10,8 +10,11 @@
 #import "Settings.h"
 #import "LoginViewController.h"
 
-@interface ViewController : UIViewController<UIWebViewDelegate>
+@interface MainViewController : UIViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *MainWebView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (weak, nonatomic) IBOutlet UIView *WaitingView;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityIndicatorView;
 
 @end

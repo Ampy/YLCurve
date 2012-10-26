@@ -11,6 +11,9 @@
 		0515929816380F38003F1193 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0515929716380F38003F1193 /* Settings.plist */; };
 		0520CC7C163A24B60097756C /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520CC7A163A24B60097756C /* Plist.m */; };
 		0520CC80163A266F0097756C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520CC7E163A266F0097756C /* Settings.m */; };
+		0520CC82163A6B930097756C /* bac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0520CC81163A6B930097756C /* bac.jpg */; };
+		0520CC84163A6D630097756C /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0520CC83163A6D630097756C /* background.jpg */; };
+		0520CC86163A71800097756C /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0520CC85163A71800097756C /* background2.jpg */; };
 		05B02BE11637DF6300D72DD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE01637DF6300D72DD7 /* UIKit.framework */; };
 		05B02BE31637DF6300D72DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE21637DF6300D72DD7 /* Foundation.framework */; };
 		05B02BE51637DF6300D72DD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE41637DF6300D72DD7 /* CoreGraphics.framework */; };
@@ -20,11 +23,11 @@
 		05B02BF31637DF6400D72DD7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B02BF21637DF6400D72DD7 /* Default.png */; };
 		05B02BF51637DF6400D72DD7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B02BF41637DF6400D72DD7 /* Default@2x.png */; };
 		05B02BF71637DF6400D72DD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B02BF61637DF6400D72DD7 /* Default-568h@2x.png */; };
-		05B02BFA1637DF6400D72DD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91637DF6400D72DD7 /* ViewController.m */; };
-		05B02BFD1637DF6400D72DD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B02BFB1637DF6400D72DD7 /* ViewController.xib */; };
+		05B02BFA1637DF6400D72DD7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91637DF6400D72DD7 /* MainViewController.m */; };
+		05B02BFD1637DF6400D72DD7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B02BFB1637DF6400D72DD7 /* MainViewController.xib */; };
 		05B02C071637DFFA00D72DD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B02C041637DFFA00D72DD7 /* LoginViewController.m */; };
 		05B02C081637DFFA00D72DD7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B02C051637DFFA00D72DD7 /* LoginViewController.xib */; };
-		05B02C091637DFFA00D72DD7 /* YL.ico in Resources */ = {isa = PBXBuildFile; fileRef = 05B02C061637DFFA00D72DD7 /* YL.ico */; };
+		05B02C091637DFFA00D72DD7 /* YL.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B02C061637DFFA00D72DD7 /* YL.png */; };
 		05B02C0D1637E12100D72DD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02C0C1637E12100D72DD7 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		0520CC7B163A24B60097756C /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
 		0520CC7E163A266F0097756C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		0520CC7F163A266F0097756C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		0520CC81163A6B930097756C /* bac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bac.jpg; sourceTree = "<group>"; };
+		0520CC83163A6D630097756C /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		0520CC85163A71800097756C /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		05B02BDC1637DF6300D72DD7 /* YLCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B02BE01637DF6300D72DD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05B02BE21637DF6300D72DD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,13 +55,13 @@
 		05B02BF21637DF6400D72DD7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		05B02BF41637DF6400D72DD7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		05B02BF61637DF6400D72DD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		05B02BF81637DF6400D72DD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		05B02BF91637DF6400D72DD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		05B02BFC1637DF6400D72DD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		05B02BF81637DF6400D72DD7 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		05B02BF91637DF6400D72DD7 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		05B02BFC1637DF6400D72DD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		05B02C031637DFFA00D72DD7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		05B02C041637DFFA00D72DD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		05B02C051637DFFA00D72DD7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		05B02C061637DFFA00D72DD7 /* YL.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = YL.ico; sourceTree = "<group>"; };
+		05B02C061637DFFA00D72DD7 /* YL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YL.png; sourceTree = "<group>"; };
 		05B02C0C1637E12100D72DD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -132,6 +138,9 @@
 		05B02BE61637DF6300D72DD7 /* YLCurve */ = {
 			isa = PBXGroup;
 			children = (
+				0520CC85163A71800097756C /* background2.jpg */,
+				0520CC83163A6D630097756C /* background.jpg */,
+				0520CC81163A6B930097756C /* bac.jpg */,
 				0520CC7E163A266F0097756C /* Settings.m */,
 				0520CC7F163A266F0097756C /* Settings.h */,
 				0515929716380F38003F1193 /* Settings.plist */,
@@ -139,12 +148,12 @@
 				05B02C031637DFFA00D72DD7 /* LoginViewController.h */,
 				05B02C041637DFFA00D72DD7 /* LoginViewController.m */,
 				05B02C051637DFFA00D72DD7 /* LoginViewController.xib */,
-				05B02C061637DFFA00D72DD7 /* YL.ico */,
+				05B02C061637DFFA00D72DD7 /* YL.png */,
 				05B02BEF1637DF6400D72DD7 /* AppDelegate.h */,
 				05B02BF01637DF6400D72DD7 /* AppDelegate.m */,
-				05B02BF81637DF6400D72DD7 /* ViewController.h */,
-				05B02BF91637DF6400D72DD7 /* ViewController.m */,
-				05B02BFB1637DF6400D72DD7 /* ViewController.xib */,
+				05B02BF81637DF6400D72DD7 /* MainViewController.h */,
+				05B02BF91637DF6400D72DD7 /* MainViewController.m */,
+				05B02BFB1637DF6400D72DD7 /* MainViewController.xib */,
 				05B02BE71637DF6300D72DD7 /* Supporting Files */,
 			);
 			path = YLCurve;
@@ -220,10 +229,13 @@
 				05B02BF31637DF6400D72DD7 /* Default.png in Resources */,
 				05B02BF51637DF6400D72DD7 /* Default@2x.png in Resources */,
 				05B02BF71637DF6400D72DD7 /* Default-568h@2x.png in Resources */,
-				05B02BFD1637DF6400D72DD7 /* ViewController.xib in Resources */,
+				05B02BFD1637DF6400D72DD7 /* MainViewController.xib in Resources */,
 				05B02C081637DFFA00D72DD7 /* LoginViewController.xib in Resources */,
-				05B02C091637DFFA00D72DD7 /* YL.ico in Resources */,
+				05B02C091637DFFA00D72DD7 /* YL.png in Resources */,
 				0515929816380F38003F1193 /* Settings.plist in Resources */,
+				0520CC82163A6B930097756C /* bac.jpg in Resources */,
+				0520CC84163A6D630097756C /* background.jpg in Resources */,
+				0520CC86163A71800097756C /* background2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +264,7 @@
 			files = (
 				05B02BED1637DF6400D72DD7 /* main.m in Sources */,
 				05B02BF11637DF6400D72DD7 /* AppDelegate.m in Sources */,
-				05B02BFA1637DF6400D72DD7 /* ViewController.m in Sources */,
+				05B02BFA1637DF6400D72DD7 /* MainViewController.m in Sources */,
 				05B02C071637DFFA00D72DD7 /* LoginViewController.m in Sources */,
 				0515929216380DBF003F1193 /* Reachability.m in Sources */,
 				0520CC7C163A24B60097756C /* Plist.m in Sources */,
@@ -271,12 +283,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		05B02BFB1637DF6400D72DD7 /* ViewController.xib */ = {
+		05B02BFB1637DF6400D72DD7 /* MainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				05B02BFC1637DF6400D72DD7 /* en */,
 			);
-			name = ViewController.xib;
+			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
