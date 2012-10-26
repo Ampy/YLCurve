@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0515929216380DBF003F1193 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0515929116380DBF003F1193 /* Reachability.m */; };
-		0515929616380EB0003F1193 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0515929516380EB0003F1193 /* Settings.m */; };
 		0515929816380F38003F1193 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0515929716380F38003F1193 /* Settings.plist */; };
+		0520CC7C163A24B60097756C /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520CC7A163A24B60097756C /* Plist.m */; };
+		0520CC80163A266F0097756C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520CC7E163A266F0097756C /* Settings.m */; };
 		05B02BE11637DF6300D72DD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE01637DF6300D72DD7 /* UIKit.framework */; };
 		05B02BE31637DF6300D72DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE21637DF6300D72DD7 /* Foundation.framework */; };
 		05B02BE51637DF6300D72DD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BE41637DF6300D72DD7 /* CoreGraphics.framework */; };
@@ -30,9 +31,11 @@
 /* Begin PBXFileReference section */
 		0515929016380DBF003F1193 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0515929116380DBF003F1193 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		0515929416380EB0003F1193 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		0515929516380EB0003F1193 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		0515929716380F38003F1193 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		0520CC7A163A24B60097756C /* Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
+		0520CC7B163A24B60097756C /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		0520CC7E163A266F0097756C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		0520CC7F163A266F0097756C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		05B02BDC1637DF6300D72DD7 /* YLCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B02BE01637DF6300D72DD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05B02BE21637DF6300D72DD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,8 +95,8 @@
 		0515929316380EB0003F1193 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				0515929416380EB0003F1193 /* Settings.h */,
-				0515929516380EB0003F1193 /* Settings.m */,
+				0520CC7A163A24B60097756C /* Plist.m */,
+				0520CC7B163A24B60097756C /* Plist.h */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -129,6 +132,8 @@
 		05B02BE61637DF6300D72DD7 /* YLCurve */ = {
 			isa = PBXGroup;
 			children = (
+				0520CC7E163A266F0097756C /* Settings.m */,
+				0520CC7F163A266F0097756C /* Settings.h */,
 				0515929716380F38003F1193 /* Settings.plist */,
 				0515928E16380DBF003F1193 /* CoreCode */,
 				05B02C031637DFFA00D72DD7 /* LoginViewController.h */,
@@ -250,7 +255,8 @@
 				05B02BFA1637DF6400D72DD7 /* ViewController.m in Sources */,
 				05B02C071637DFFA00D72DD7 /* LoginViewController.m in Sources */,
 				0515929216380DBF003F1193 /* Reachability.m in Sources */,
-				0515929616380EB0003F1193 /* Settings.m in Sources */,
+				0520CC7C163A24B60097756C /* Plist.m in Sources */,
+				0520CC80163A266F0097756C /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

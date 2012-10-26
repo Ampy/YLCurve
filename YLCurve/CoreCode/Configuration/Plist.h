@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Settings:NSObject
-@property (nonatomic, retain) NSString* ServiceUrl;
-+(Settings *)Instance;
+@interface Plist:NSObject
+{
+    NSString *plistPath;
+    NSDictionary *dictionary;
+}
+-(id) initWithFileName:(NSString *)fileName;
+-(NSString *)GetValue:(NSString *)SectionName;
 @end
