@@ -26,10 +26,7 @@ static Settings *globalSettings = nil;
             globalSettings = [super allocWithZone:zone];
             
             //读取配置表Settings.plist
-            //NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
-            //NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-            Plist *plist = [[Plist alloc] initWithFileName:@"Settings"];
-            
+            Plist *plist = [[Plist alloc] initWithFileName:@"Settings"];           
             globalSettings.ServiceUrl = [plist GetValue:@"ServiceUrl"];
             
             return  globalSettings;

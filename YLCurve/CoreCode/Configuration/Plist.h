@@ -11,8 +11,11 @@
 @interface Plist:NSObject
 {
     NSString *plistPath;
-    NSDictionary *dictionary;
+    NSMutableDictionary *dictionary;
 }
 -(id) initWithFileName:(NSString *)fileName;
 -(NSString *)GetValue:(NSString *)SectionName;
+-(NSString *) GetValueByPath:(NSString *)path;
+-(void)SetValue:(NSString *)sectionValue SectionPath:(NSString *)sectionPath;
+-(void)SetValue:(NSString *)sectionValue SectionName:(NSString *)sectionName;
 @end

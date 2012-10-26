@@ -22,13 +22,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        
         Reachability * re =[Reachability reachabilityWithHostname:[Settings Instance].ServiceUrl];
         NetworkStatus mp = [re currentReachabilityStatus];
         if(mp==ReachableViaWiFi)
         {
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提醒" message:@"网络不通，请联系管理员" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:@"ok", nil];
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提醒" message:@"网络不通，请联系管理员" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
             alert.tag=100;
             [alert show];
 
@@ -45,8 +43,7 @@
 
     if(alertView.tag==100 && buttonIndex==0)
     {
-        exit(0);
-        //Code that will run after you press ok button
+        exit(1);
     }
 }
 

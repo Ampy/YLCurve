@@ -16,13 +16,41 @@
     if(self)
     {
          plistPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
-         dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+         dictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
     }
     return self;
 }
 
--(NSString *)GetValue:(NSString *)SectionName
+-(NSString *)GetValue:(NSString *)sectionName
 {
-    return [dictionary objectForKey:SectionName];
+    return [dictionary valueForKeyPath:sectionName];
+}
+
+-(NSString *) GetValueByPath:(NSString *)path
+{
+    return [dictionary valueForKeyPath:path];
+}
+
+-(void)SetValue:(NSString *)sectionValue SectionPath:(NSString *)sectionPath
+{
+    [dictionary setValue:sectionValue forKeyPath:sectionPath];
+    
+    if (![dictionary writeToFile:plistPath atomically:YES]) {
+        
+        NSLog(@"Write %@ File Error!",plistPath);
+        
+    }
+}
+
+-(void)SetValue:(NSString *)sectionValue SectionName:(NSString *)sectionName
+{
+    [dictionary setValue:sectionValue forKey:sectionName];
+  
+    if (![dictionary writeToFile:plistPath atomically:YES]) {
+    
+        NSLog(@"Write %@ File Error!",plistPath);
+    
+    }
+    
 }
 @end
