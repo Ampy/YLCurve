@@ -164,15 +164,15 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {
-    //    static CGFloat normalKeyboardHeight = 216.0f;
-    //
-    //    NSDictionary *info = [notification userInfo];
-    //    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    //
-    //    CGFloat distanceToMove = kbSize.height - normalKeyboardHeight;
-    
-    originRect=self.LoginFrame.frame;
-    self.LoginFrame.frame=CGRectMake(originRect.origin.x, originRect.origin.y-80, originRect.size.width, originRect.size.height);
+//    static CGFloat normalKeyboardHeight = 0.0f;
+//    //
+//    NSDictionary *info = [notification userInfo];
+//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+//    //
+//    CGFloat distanceToMove = kbSize.height - normalKeyboardHeight;
+//    
+//    originRect=self.LoginFrame.frame;
+//    self.LoginFrame.frame=CGRectMake(originRect.origin.x, originRect.origin.y-distanceToMove, originRect.size.width, originRect.size.height);
     //自适应代码
 }
 
